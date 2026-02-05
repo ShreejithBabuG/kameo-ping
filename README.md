@@ -30,15 +30,21 @@ kameo_ping/
 Add these to both `Cargo.toml` files:
 
 ```toml
+[package]
+name = "ping-client"
+version = "0.1.0"
+edition = "2021"
+
 [dependencies]
-kameo = { version = "0.15", features = ["remote"] }
+kameo = { version = "0.19", features = ["remote"] }
 tokio = { version = "1", features = ["full"] }
-serde = { version = "1.0", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
-libp2p = { version = "0.56", features = ["tcp", "noise", "yamux", "macros"] }
-futures = "0.3"
-clap = { version = "4.0", features = ["derive"] }  # client only
+anyhow = "1"
+libp2p = "0.56"
+clap = { version = "4", features = ["derive"] }
+futures = "0.3"  
 ```
 
 ## Running It
