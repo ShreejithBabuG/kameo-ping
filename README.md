@@ -29,7 +29,7 @@ kameo_ping/
 
 Add these to both `Cargo.toml` files:
 
-```toml
+```
 [dependencies]
 kameo = { version = "0.19", features = ["remote"] }
 tokio = { version = "1", features = ["full"] }
